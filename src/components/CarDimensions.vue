@@ -69,6 +69,12 @@ export default {
             this.selectedMake = ''
             this.selectedModel = ''
             this.selectedYear = ''
+            this.data = {
+                makes: [],
+                models: [],
+                years: [],
+                info: {}
+            }
         }
     },
     watch: {
@@ -79,6 +85,7 @@ export default {
                 return;
             }
             this.data.models = []
+            this.data.info = {}            
             this.loading = true;
             // get vehicle brand models
             axios
@@ -89,6 +96,7 @@ export default {
         selectedModel: function(model) {
             if(!model) return;
             this.data.years = []
+            this.data.info = {}            
             this.loading = true;
             // get vehicle model years
             axios
