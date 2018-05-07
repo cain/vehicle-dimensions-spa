@@ -1,12 +1,17 @@
 <template>
   <div id="app">
-    Vehicle Dimensions VueJS spa
+    <h1>AutoTrader</h1>
+    <car-dimensions />
   </div>
 </template>
 
 <script>
+import CarDimensions from './components/CarDimensions'
 export default {
   name: 'app',
+  components: {
+    CarDimensions
+  },
   data () {
     return {
     
