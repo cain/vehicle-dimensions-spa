@@ -1,16 +1,16 @@
 <template>
   <div id="app">
     <h1>AutoTrader</h1>
-    <car-dimensions />
+    <dimensions-search />
   </div>
 </template>
 
 <script>
-import CarDimensions from './components/CarDimensions'
+import DimensionsSearch from './components/DimensionsSearch'
 export default {
   name: 'app',
   components: {
-    CarDimensions
+    DimensionsSearch
   },
   data () {
     return {
