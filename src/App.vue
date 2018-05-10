@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <h1>AutoTrader</h1>
-    <dimensions-search />
+    <!-- <h1>AutoTrader</h1> -->
+    <div class="container">
+      <dimensions-search />
+    </div>
   </div>
 </template>
 
@@ -26,5 +28,8 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
 </style>
