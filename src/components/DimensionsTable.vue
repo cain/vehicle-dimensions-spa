@@ -5,9 +5,12 @@
             <th>HxWxL (cm)</th>
             <th>Kerb Weight (kg)</th>
         </tr>
-        <tr v-for="(dimensions, i) in info.dimensions" :key="dimensions.variant_seo + i" v-if="dimensions.variant">
+        <tr
+            v-for="(dimensions, i) in info.dimensions"
+            :key="dimensions.variant_seo + i"
+        >
             <td>{{dimensions.variant}}</td>
-            <td>{{dimensions.height}}x{{dimensions.width}}x{{dimensions.length}}</td>
+            <td>{{calcDimensions(dimensions)}}</td>
             <td>{{dimensions.kerb_weight}}</td>
         </tr>
     </table>
@@ -15,7 +18,12 @@
 
 <script>
 export default {
-    props: ['info']
+    props: ['info'],
+    methods: {
+        calcDimensions: function(dimensions) {
+            return `${dimensions.height}x${dimensions.width}x${dimensions.length}`
+        }
+    }
 }
 </script>
 
