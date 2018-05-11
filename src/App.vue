@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <!-- <h1>AutoTrader</h1> -->
     <div class="container">
+      <h1>AutoTrader</h1>      
       <dimensions-search />
     </div>
   </div>
@@ -23,10 +23,18 @@ export default {
 </script>
 
 <style lang="scss">
+$c-font: #5e6d82;
+$c-font-strong: #1f2f3d;
+
 #app {
-  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB",Arial,sans-serif;
+  font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: $c-font;  
+  h1, h2 {
+    font-weight: 400;
+    color: $c-font-strong;
+  }
 }
 .container {
   max-width: 1000px;

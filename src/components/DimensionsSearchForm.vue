@@ -29,13 +29,12 @@
         <button class="search-button" @click="clear">
             Clear
         </button>
-        <span v-if="loading">Loading...</span>        
     </div>
 </template>
 
 <script>
 export default {
-    props: ['data', 'loading'],
+    props: ['data'],
     data() {
         return {
             selectedMake: '',
@@ -86,36 +85,51 @@ export default {
 
 <style lang="scss" scoped="">
 .search-form {
+    display: flex;
+    flex-wrap: wrap;
+    color: white; 
+    background: #ff4949;
+    padding: 20px;
+    border-radius: 3px;
     .search-header {
         margin: 0px  0px 6px 0px;
+        color: #fff;
+    }
+    .selected-vehicle {
+        margin-bottom: 0px;
     }
     .search-select {
         -webkit-appearance: none;
         padding: 10px;
         margin: 6px 6px 6px 0px;
         min-width: 200px;
+        flex: 1;
         background-color: #fff;
         background-image: url(https://d30y9cdsu7xlg0.cloudfront.net/png/1123247-200.png);
         background-size: 20px;
         background-repeat: no-repeat;
         background-position: center right 10px;
+        border: none;
         &:disabled {
             background-color: rgb(244, 244, 244);
             cursor: not-allowed;
         }
     }
-    color: white;    
-    background: red;
-    padding: 20px;
-    border-radius: 3px;
     .search-info {
-        display: block;
+        min-width: 100%;
     }
     .search-button {
         padding: 10px 30px;
-        background: #fff;
         border-radius: 5px;
         margin: 6px 6px 6px 0px;
+        background: #fff;
+        border: 1px solid #dcdfe6;
+        border-color: #dcdfe6;
+        color: #606266;
+        -webkit-appearance: none;
+        text-align: center;
+        font-weight: bold;
+        cursor: pointer;
     }
 }
 </style>
