@@ -53,15 +53,12 @@ export default {
 
 
 <style lang="scss" scoped="">
-.table-container {
+.table {
     border: 1px solid #ebebeb;
     border-radius: 3px;
-}
-.table {
     min-width: 450px;
     overflow-x: scroll;
     transition: .2s;
-    margin-top: 20px;
     padding: 20px;
     width: 100%;
     .table-header th {
